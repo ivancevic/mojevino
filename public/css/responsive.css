@@ -1,0 +1,39 @@
+@media (max-width: 992px) {
+
+    .navbar-collapse {
+        background-color: rgba(255, 103, 103, 0.829);
+        padding-left: 1rem;
+    }
+}
+
+@media (max-width: 768px) {
+
+    /* Hero */
+    .image-box {
+        display: none;
+    }
+
+    .main-hero-content h1 {
+        text-align: center;
+    }
+
+    .main-hero-content p {
+        text-align: center;
+    }
+
+    .hero-buttons {
+        text-align: center;
+        margin-bottom: 3rem;
+    }
+
+    #vinarije {
+        margin-top: 0;
+    }
+
+    #cenovnik .cenovnik-table {
+        width: calc(80% / 1);
+        margin-top: 2rem;
+        margin-left: auto;
+        margin-right: auto;
+    }
+}

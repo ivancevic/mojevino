@@ -1,0 +1,265 @@
+{% extends 'base.html.twig' %}
+
+{%block title %}Portal MojeVino - Vas vodic kroz vinski svet{% endblock %}
+
+
+    
+
+{% block body %}
+    <header>
+        {{ include('inc/navbar.html.twig') }}
+        <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    </header>
+
+	{# Hero section #}
+    <section id="hero">
+        <div class="container">
+            <div class="row main-hero-content">
+                <div class="col-md-6">
+                    <h1>VAŠ VODIČ KROZ VINSKI SVET</h1>
+                    <p>Predstavljamo Vam novi komunikacijski kanal kojim ćete svojim potrošačima omogućiti da se na jednostavan način upoznaju sa Vašim vinima i vinarijom.</p>
+                    <p>Nudimo Vam besplatno 6 meseci probni period za naš osnovni paket</p>
+                    <div class="hero-buttons">
+                        <a href="#kontakt" class="btn btn-outline-primary btn-white">Prijavite se</a>
+                        <a href="/vinarije" class="btn btn-outline-primary btn-white">Pogledajte naše vinarije</a>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="image-box">
+                        <img src="/img/casa640.png" class="img-responsive mx-auto d-block" alt="vinska casa">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    {# End Hero section #}
+
+    {# Servis section #}
+    <section id="servis">
+        <div class="container">
+            <div class="row  section-title justify-content-center">
+                <h2 class="section-title-heading">Prednosti servisa MojeVino</h2>
+            </div>
+            <div class="row justify-content-center text-center mt-5">
+                <div class="col-md-4">
+                    <i class="fas fa-cogs fa-3x mb-3"></i>
+                    <h3>Jednostavan za korišćenje</h3>
+                    <p>Jedino što treba da uradite da bi ste koristili servis MojeVino je da nam posaljete podatke o vašoj vinariji i vašim vinima. 
+                    Korišćenjem mobilnih tehnologija moći ćete sami da upravljate web sajtovima koji su optimizovani i za pregled i korišćenje na mobilnim telefonima.</p>
+                </div>
+                <div class="col-md-4">
+                    <i class="fas fa-comments fa-3x mb-3"></i>
+                    <h3>Direktna komunikacija</h3>
+                    <p>Uz pomoć servisa MojeVino™ orijentisani ste i obraćate se direktno vašim potrošačima. 
+                    Potrošaču prosleđujete informacije o opisu vina, načinu serviranja, predlozima za uparivanje, video zapise, fotografije, kao i lokaciju vinarije. 
+                    Potrošač sve informacije dobija direktno od Vas.</p>
+                </div>
+                <div class="col-md-4">
+                    <i class="fas fa-qrcode fa-3x mb-3"></i>
+                    <h3>Moderne tehnologije</h3>
+                    <p>Integracija servisa Moje Vino™ sa Google Analitics vas trenutno informiše o broju skeniranih QR kodova kao i o lokacijama na kojima se to dogodilo. 
+                    Tehnologija QR kodova, kao i softverski i analitički alati koje smo razvili omogućiće Vam da istog trenutka kada neko od Vaših 
+                    potrošača skenira kod Vi budete informisani o tome koje vino je predmet interesovanja kao i na na kojoj geografskoj lokaciji se to dogodilo.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    {# End Servis seciton #}
+
+    {# Vinarije section #}
+    <section id="vinarije">
+        <div class="container">
+            <div class="row  section-title justify-content-center">
+                <h2 class="section-title-heading">Naše vinarije</h2>
+            </div>
+            <div class="row mt-5">
+                <div class="col-md-4">
+                        <div class="feature-block">
+                            <h3> <i class="fas fa-wine-bottle fa-2x"></i> Podrum Milojević</h3>
+                            <p>U delu opštine Lazarevac, u selu Zeoke gde se pitoma Kolubara susreće sa brdovitom Šumadijom nalazi se podrum „Milojević“. Padine zeočkih brda čuvaju viševekovnu tradiciju vinogradarstva ovog kraja. Porodica Milojević, se prema pisanim podacima Arhiva Srbije, vinogradarstvom bavi od 1863.
+                            godine kada je posedovala tri motike vinograda (jedna motika je posedovala površinu koju jedan kopač za dan okopa).</p>
+                        </div>
+                        <div class="feature-block md-5">
+                            <h3> <i class="fas fa-wine-bottle fa-2x"></i> Podrum Panajotović</h3>
+                            <p>Četiri generacije u porodici Panajotović, tokom nešto više od 90 godina,  
+                            se trudilo da pruži svom vinu dovoljno ljubavi i stručnosti da bude što kvalitetnije.
+                            Sve je počelo 1927. godine kad je pradeda Toma osnovao porodični podrum vina u okolini Kruševca. 
+                            Arhitekta iz Francuske je projektovao vinski podrum i porodičnu kuću, a kupljene su, za to vreme, najmodernije mašine.</p>
+                        </div>
+                </div>
+                <div class="col-md-4 flasa">
+                    <img src="/img/flasa1.png"  class="img-fluid" alt="flasa">
+                </div>
+                <div class="col-md-4">
+                        <div class="feature-block">
+                            <h3> <i class="fas fa-wine-bottle fa-2x"></i> Vinarija Jeremić</h3>
+                            <p>Vinarija Jeremić se nalazi u Smederevu-Jugovu, 40 km od Beograda. 
+                            Registrovana je 2010. godine kao poslovna jedinica u firmi “EKO mineral d.o.o.“ vlasništva porodice Jeremić iz Smedereva.
+                             Nekada kućno spravljanje vina za potrebe porodice i prijatelja, zamenjeno je modernom vinarijom, 
+                             koja tradicionalne metode primenjuje u najsavremenijoj opremi i prati uz nova stručna saznanja.</p>
+                        </div>
+                        <div class="feature-block md-5">
+                            <h3> <i class="fas fa-wine-bottle fa-2x"></i> Vinarija Mačkov Podrum</h3>
+                            <p>U porodici osnivača Mačkovog podruma se grožđe gaji i vino pravi već generacijama.           
+                            Današnji oblik i obim vinarije, kao profesionalno preduzeće, pokrenuo je Sava Jojić – Mačak, 2005. godine.
+                            Sadašnja zgrada vinarije je sagrađena i opremljena 2004. godine.
+                            Kapacitet vinarije iznosi 200.000 litara a godišnje se proizvodi 120.000 boca vina.
+                            Vinarija raspolaže sudovima od nerđajućeg čelika, kao i buradima i bačvama od hrasta i od bagrema.</p>
+                        </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    {# End Vinarije section #}
+
+    {# Mediji section #}
+    <section id="mediji">
+        <div class="container">
+            <div class="row mediji-title justify-content-center">
+                <h2>MojeVino na Beogourmetu</h2>
+                <p>Pozivamo Vas da posetite jedinstveni vinarski i gastronomski skup na Balkanu koji se održava u petak 03.06.2016 od 15-20h u hotelu Majestic 
+                u Beogradu. Bićete u prilici da degustirate vina vrhunskog kvaliteta, inostranih i domaćih proizvođača, 
+                kao i da učestvujete u nagradnog igri skeniraj i osvoji vina Podruma Panajotović. Jedno vino će svakako biti zvezda dana, 
+                radi se o vinu iz Bordoa, to jest Saint-Emilion Grand Cru, berbe 2014 koja je bila izuzetno dobra, 
+                a vino koje je g-din Jean Dutruilh nazvao po srpskom kralju Petru prvom. 
+                <div class="mediji-btn">
+                    <a href="#"><i class="fas fa-mail-bulk"></i> Prijavi se</a>
+                </div>
+            </div>
+        </div>
+    </section>
+    {# End Mediji section #}
+
+    {# Cenovnik section #}
+    <section id="cenovnik">
+        <div class="container">
+            <div class="row  section-title justify-content-center">
+                <h2 class="section-title-heading">Cenovnik</h2>
+            </div>
+            <div class="row justify-content-center">
+                <div class="col-md cenovnik-table">
+                    <div class="table-header text-center">
+                        <h4>Osnovni paket</h4>
+                        <p>550 din/mesecno</p>
+                        <h5><span class="badge badge-pill badge-dark">6 meseci gratis</span></h5>
+                    </div>
+                    <div class="table-content">
+                        <ul>
+                            <li>osnovni dizajn web stranice</li>
+                            <li>generisanje QR koda (link na web stranicu prilagođenu pregledu na mobilnim uređajima)</li>
+                            <li>linkovi na Website, Facebook, Twitter, Instagram, Foursquare, Pinterest, Flickr</li>
+                            <li>analitika (mesečno izveštavanje, primer izveštaja link)</li>
+                            <li>hostovanje i održavanje prezentacije</li>
+                            <li>osnovni nivo podrške</li>
+                        </ul>
+                    </div>
+                    <div class="table-footer text-center">
+                        <a href="#">naruči paket</a>
+                    </div>
+                </div>
+                <div class="col-md cenovnik-table">
+                    <div class="table-header text-center">
+                        <h4>Napredni paket</h4>
+                        <p>1450 din/mesecno</p>
+                    </div>
+                    <div class="table-content">
+                        <ul>
+                            <li>osnovni dizajn web stranice</li>
+                            <li>generisanje QR koda (link na web stranicu prilagođenu pregledu na mobilnim uređajima)</li>
+                            <li>lintegracija sa Web site-om, Facebook-om, Google+,Twitter-om, Instagram-om, Flickr-om, Foursquare-om, Pinterest-om</li>
+                            <li>analitika (mesečno izveštavanje, primer izveštaja link)</li>
+                            <li>hostovanje i održavanje prezentacije</li>
+                            <li>nagradna igra</li>
+                            <li>podrška za tri jezika po izboru</li>
+                            <li>napredni nivo podrške</li>
+                        </ul>
+                    </div>
+                    <div class="table-footer text-center">
+                        <a href="#">naruči paket</a>
+                    </div>
+                </div>
+                <div class="col-md cenovnik-table">
+                    <div class="table-header text-center">
+                        <h4>MojeVino™+</h4>
+                        <p>Cena se utvrđujuje po definisanju vrste i obima projekta</p>
+                    </div>
+                    <div class="table-content">
+                        <ul>
+                            <li>osnovni dizajn web stranice</li>
+                            <li>generisanje QR koda (link na web stranicu prilagođenu pregledu na mobilnim uređajima)</li>
+                            <li>linkovi na Website, Facebook, Twitter, Instagram, Foursquare, Pinterest, Flickr</li>
+                            <li>analitika (mesečno izveštavanje, primer izveštaja link)</li>
+                            <li>hostovanje i održavanje prezentacije</li>
+                            <li>nagradna igra</li>
+                            <li>sistem kupona i vaučera</li>
+                            <li>Wine Club</li>
+                            <li>sopstvini domen</li>
+                            <li>email sa 50 mailbox-ova</li>
+                            <li>podrška za tri jezika po izboru</li>
+                            <li>podrska 24/7</li>
+                        </ul>
+                    </div>
+                    <div class="table-footer text-center">
+                        <a href="#">naruči paket</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    {# End Cenovnik section #}
+
+    {# Kontkat section #}
+    <section id="kontakt">
+        <div class="container">
+            <div class="row  section-title justify-content-center">
+                <h2 class="section-title-heading">Kontakt</h2>
+            </div>
+            <div class="row mt-5">
+                <div class="col-md-8">
+                    <form action="#">
+                        <div class="row">
+                            <div class="col">
+                                <input type="text" class="form-control" placeholder="Unesite ime">
+                            </div>
+                            <div class="col">
+                                <input type="email" class="form-control" placeholder="Unesite email adresu">
+                            </div>
+                        </div>
+                        <div class="form-group mt-4">
+                            <textarea name="" id="" class="form-control" rows="10" placeholder="Unesite poruku"></textarea>
+                        </div>
+                        <button type="submit" class="btn btn-contact mt-4">Prosledi</button>
+                    </form>
+                </div>
+                <div class="col-md-4">
+                    <div class="address text-center">
+                        <h3>Kontaktirajte nas</h3>
+                        <p>Bilo da nam pišete ili da nas zovete, dobićete odgovore na sva vaša pitanja. Više od 20 godina uspešni na polju internet tehnologija, 
+                            kao i na polju pravljenja vina.</p>  
+                    </div>
+                    <div class="contact-details mt-5">
+                        <ul class="fa-ul">
+                            <li><span class="fa-li"><i class="fas fa-mobile-alt"></i></span>+381 69 33 207 00</li>
+                            <li><span class="fa-li"><i class="fas fa-map-marker-alt"></i></span>Ugrinovačka 202, 11272 Dobanovci, Beograd</li>
+                            <li><span class="fa-li"><i class="fas fa-paper-plane"></i></span>office@mojevino.rs</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    {# End Kontkat #}
+
+    {# Footer section #}
+    {{ include('inc/footer.html.twig') }}
+   
+
+{% endblock %}
+
+{% block javascripts %}
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+    <script src="/js/main.js"></script>
+    <script src="/js/app.js"></script>
+{% endblock %}

@@ -1,0 +1,10 @@
+{% extends 'base.html.twig' %}
+
+{%block title %}Portal MojeVino - Vas vodic kroz vinski svet{% endblock %}
+
+{% block body %}
+	<h1>{{ vino.name }}</h1>
+    <p>{{ vino.description }}</p>
+    <hr>
+    <a href="/">Go Back</a>
+{% endblock %}

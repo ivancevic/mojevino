@@ -1,0 +1,34 @@
+{% extends 'base.html.twig' %}
+
+{%block title %}Portal MojeVino - Vas vodic kroz vinski svet{% endblock %}
+
+{% block body %}
+	{{ form_start(form) }}
+    {{ form_widget(form) }}
+    {{ form_end(form) }}
+{% endblock %}
+
+{# <h1>MojeVino</h1>
+        
+        {% if vina %}
+            <table id="vina" class="table table-striped">
+                <thead>
+                    <tr>
+                        <th>Vino</th>
+                        <th></th>
+                    </tr>
+                </thead>
+                <tbody>
+                    {% for vino in vina %}
+                        <tr>
+                            <td> {{ vino.name }} </td>
+                            <td> <a class="btn btn-success" href="/vino/{{ vino.id }}">Prikazi</a>
+                                 <a class="btn btn-dark" href="/vino/edit/{{ vino.id }}">Azuriraj</a>
+                                 <a class="btn btn-danger delete-vino" href="#" data-id="{{ vino.id }}">Obrisi</a></td>
+                        </tr>
+                    {% endfor %}
+                </tbody>
+            </table>
+        {% else %}
+            <p>Nema vina na lageru.
+        {% endif %} #}

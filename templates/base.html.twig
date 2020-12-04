@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="sr-RS">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta name="description" content="Moje vino je vinski i gastro portal. Cilj nam je da vina, vinarije iz Srbije i regiona predstavimo što široj publici. Otkrijte čudestan Svet Vina"/>
+        <meta name="robots" content="max-snippet:-1, max-image-preview:large, max-video-preview:-1"/>
+        <title>{% block title %}Welcome!{% endblock %}</title>
+        
+        {% block stylesheets %}
+			<link rel="stylesheet" href="https://bootswatch.com/4/cosmo/bootstrap.min.css">
+            <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css">
+            <link href="https://fonts.googleapis.com/css2?family=Eczar:wght@700&display=swap" rel="stylesheet"> 
+            <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@400;500;600;700;800;900&display=swap" rel="stylesheet"> 
+            <link rel="stylesheet" href="/css/style.css">
+            <link rel="stylesheet" href="/css/responsive.css">        
+        {% endblock %}
+        
+    </head>
+    <body>
+    
+        
+        	{% block body %}{% endblock %}
+        
+        {% block javascripts %}
+        {% endblock %}
+    </body>
+</html>

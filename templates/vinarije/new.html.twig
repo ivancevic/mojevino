@@ -1,0 +1,26 @@
+{% extends 'base.html.twig' %}
+
+{%block title %}Portal MojeVino - Vas vodic kroz vinski svet{% endblock %}
+
+{% block body %}
+    <header>
+        {{ include('inc/navbar-rest.html.twig') }}
+    </header>
+    
+    {# Vinarije-new section #}
+    <section id="vinarijeList">
+        <div class="container">
+            
+             {% form_theme form 'bootstrap_4_layout.html.twig' %}
+            {{ form_start(form) }}
+            {{ form_widget(form) }}
+            {{ form_end(form) }}
+        </div>
+    </section>
+    {# End Vinarije-new section #}
+
+    {# Footer section #}
+    {{ include('inc/footer.html.twig') }}
+    
+
+{% endblock %}

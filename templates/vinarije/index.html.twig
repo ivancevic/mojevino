@@ -1,0 +1,46 @@
+{% extends 'base.html.twig' %}
+
+{%block title %}Portal MojeVino - Vas vodic kroz vinski svet{% endblock %}
+
+{% block body %}
+    <header>
+        {{ include('inc/navbar-rest.html.twig') }}
+    </header>
+    
+    {# Vinarije-list section #}
+    <section id="vinarijeList">
+        <div class="container">
+            <div class="row vinarije-list">
+            {% if vinarije %}
+                 {% for vinarija in vinarije %}
+                <div class="col-md-4">
+                    <div class="image-box-vinarije">
+                        <img src="/img/{{ vinarija.slika }}" class="img-fluid mx-auto d-block" alt="vinarija-slika">
+                    </div>
+                </div>
+                <div class="col-md-8">
+                    <div class="card-transparent">
+                        <div class="card-header">
+                            {{ vinarija.ime }}
+                        </div>
+                        <div class="card-body">
+                            <h5 class="card-title">O Vinariji</h5>
+                            <p class="card-text"> {{ vinarija.opis|striptags|slice(0, 270) }}...</p>
+                            <a href="/vinarije/{{ vinarija.slug }}" class="btn btn-dark">Više detalja</a>
+                        </div>
+                    </div>
+                </div>
+                 {% endfor %}   
+            {% else %}
+                <p>Nema raspolozivih vinarija u bazi</p>
+            {% endif %}
+            </div>
+        </div>
+    </section>
+    {# End Vinarije-list section #}
+
+    {# Footer section #}
+    {{ include('inc/footer.html.twig') }}
+    
+
+{% endblock %}

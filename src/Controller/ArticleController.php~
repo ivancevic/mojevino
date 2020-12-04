@@ -1,0 +1,9 @@
+<php namespace App\Controller;
+
+use Symfony\Component\HttpFondation\Response;
+
+class ArticleController {
+	public function index() {
+		return new Response('<html><body>MojeVino</body></html>');	
+	}	
+}

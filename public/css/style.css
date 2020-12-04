@@ -1,0 +1,481 @@
+:root {
+    --main-accent-color: #f54336;
+    --section-title-color-dark: #41050f;
+    --body-color: #495057;
+    --brend-color: #ff8e86;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Raleway', sans-serif;
+}
+
+h1 {
+    font-family: 'Raleway', sans-serif;
+    font-size: 2.6rem;
+    line-height: 4rem;
+    font-weight: 800;
+}
+
+.btn-white {
+    border: 2px solid #ffffff;
+    border-radius: 2rem;
+    color: #ffffff;
+    font-weight: 600;
+    text-transform: lowercase;
+    font-size: 1rem;
+    padding-left: 2rem;
+    padding-right: 2rem;
+}
+
+.btn-white:hover {
+    background-color: #ffffff;
+    color: var(--main-accent-color);
+    border: 2px solid #ffffff;
+}
+
+.my-brend {
+    font-family: 'Eczar', serif;
+}
+
+.my-brend-color {
+    color: var(--main-accent-color);
+}
+
+/* Section title */
+.section-title {
+    position: relative;
+}
+
+h2.section-title-heading {
+    color: var(--section-title-color-dark);
+    padding-top: 2rem;
+    text-transform: uppercase;
+    font-weight: 700;
+    font-size: 1.8rem;
+}
+
+.section-title::after {
+    content: '';
+    position: absolute;
+    border-bottom: 3px solid var(--main-accent-color);
+    width: 10%;
+    top: 80px;
+}
+
+.section-title:hover::after {
+    width: 15%;
+    transition: all 0.6s ease-out;
+    -webkit-transition: all 0.6s ease-out;
+    -moz-transition: all 0.6s ease-out;
+    -o-transition: all 0.6s ease-out;
+}
+
+/* ============= Navigation ============== */
+.navbar {
+    padding-top: 1.2rem;
+}
+
+.navbar-light .navbar-nav .nav-link {
+    color: #ffffff;
+    text-transform: uppercase;
+    font-weight: 600;
+    font-size: .85rem;
+}
+
+.navbar-light .navbar-nav .nav-link:hover {
+    color: #c84c45;
+}
+
+.navbar-brand h3 {
+    color: #ffffff;
+}
+
+.navbar.active {
+    background-color: rgba(255, 103, 103, 0.7);
+    box-shadow: 1px 2px 10px rgba(0,0,0, 0.1);
+}
+
+/* ============= Navigation Rest ============== */
+
+.navbar-dark .navbar-nav .nav-link {
+    color:  #c84c45;
+    text-transform: uppercase;
+    font-weight: 600;
+    font-size: .85rem;
+}
+
+.navbar-dark .navbar-nav .nav-link:hover {
+    color: #f36d66;
+}
+
+.navbar-rest h3 {
+    color:  #2b323f;
+}
+
+/* ============= Hero ============== */
+#hero {
+    background-image: linear-gradient(to right, rgba(87,77,85, 0.62), rgba(59,52,85, 0.52)), url(../img/hero2.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    padding-top: 8rem;
+    padding-bottom: 6rem;
+    position: relative;
+}
+
+#hero::after {
+    content: '';
+    position: absolute;
+    background-color: #ffffff;
+    width: 100%;
+    height: 15%;
+    transform: skewY(-2deg);
+    transform-origin: bottom right;
+    bottom: 0;
+    right: 0;
+    left: 0;
+}
+
+.main-hero-content h1 {
+    color: #ffffff;
+    text-transform: uppercase;
+    letter-spacing: .11rem;
+}
+
+.main-hero-content p {
+    color: #ffffff;
+    margin-top: 2rem;
+    margin-bottom: 3rem;
+    line-height: 1.7rem;
+    font-size: 1.2rem;
+}
+
+.image-box img {
+    position: relative; 
+    top: 4rem;
+    z-index: 1;
+}
+
+/* ============= Servis ============== */
+
+#servis i {
+    color: var(--main-accent-color);
+}
+
+#servis h3 {
+    color: var(--section-title-color-dark);
+    padding-top: 1rem;
+    font-weight: 600;
+    font-size: 1.5rem;
+    text-transform: uppercase;
+}
+
+#servis p {
+    padding-top: 1rem;
+    color: var(--body-color);
+    font-size: 1rem;
+    line-height: 1.7rem;
+}
+
+#servis {
+    position: relative;
+    padding-top: 6rem;
+    padding-bottom: 8rem;
+}
+
+#servis::after {
+    content: '';
+    position: absolute;
+    background-color: #faefef;
+    width: 100%;
+    height: 15%;
+    transform: skewY(-2deg);
+    transform-origin: bottom right;
+    bottom: -50px;
+    right: 0;
+    left: 0;
+}
+
+/* ============= Vinarije ============== */
+
+#vinarije {
+    background-color: #faefef;
+    padding-top: 6rem;
+    padding-bottom: 6rem;
+    margin-top: 3rem;
+}
+
+#vinarije img {
+    display: block;
+    margin: 0 auto;
+}
+
+#vinarije .feature-block {
+    text-align: center;
+}
+
+#vinarije .feature-block h3 {
+    color: var(--section-title-color-dark);
+    padding-top: 1rem;
+    font-weight: 600;
+    font-size: 1.5rem;
+    text-transform: uppercase;
+}
+
+#vinarije .feature-block p {
+    padding-top: 1rem;
+    color: var(--body-color);
+    font-size: 1rem;
+}
+
+#vinarije i {
+    color: var(--main-accent-color);
+}
+
+/* ============= Mediji ============== */
+
+#mediji {
+    background-image: linear-gradient(to right, rgba(87,77,85, 0.62), rgba(59,52,85, 0.52)), url(../img/hleb.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    padding-bottom: 8rem;
+    padding-top: 6rem;
+    position: relative;
+}
+
+#mediji::after {
+    content: '';
+    position: absolute;
+    background-color: #ffffff;
+    width: 100%;
+    height: 15%;
+    transform: skewY(-2deg);
+    transform-origin: bottom right;
+    bottom: -1px;
+    right: 0;
+    left: 0;
+}
+
+#mediji .mediji-title h2 {
+    color: #ffffff;
+    text-transform: uppercase;
+    font-weight: 700;
+    font-size: 1.8rem;
+}
+
+#mediji .mediji-title p {
+    color: #ffffff;
+    text-align: center;
+    font-size: 1.2rem;
+    line-height: 1.7rem;
+    margin-top: 2.5rem;
+}
+
+#mediji .mediji-title .mediji-btn {
+    margin-top: 3rem;
+}
+
+#mediji .mediji-title .mediji-btn a {
+    border: 2px solid #ffffff;
+    border-radius: 2rem;
+    color: #ffffff;
+    font-weight: 600;
+    font-size: 1rem;
+    padding: .8rem 2rem;
+}
+
+#mediji .mediji-title .mediji-btn a:hover {
+    background-color: #ffffff;
+    color: var(--main-accent-color);
+    border: 2px solid #ffffff;
+    text-decoration: none;
+}
+
+/* ============= Cenovnik ============== */
+
+#cenovnik {
+    padding-bottom: 7rem;
+    padding-top: 4rem;
+    position: relative;
+}
+
+#cenovnik .section-title {
+    margin-bottom: 4rem;
+}
+
+#cenovnik .cenovnik-table {
+    background-color: #ffffff;
+    box-shadow: -1px 0px 12px 4px rgba(0,0,0, 0.24);
+    -webkit-box-shadow: -1px 0px 12px 4px rgba(0,0,0, 0.24);
+    -moz-box-shadow: -1px 0px 12px 4px rgba(0,0,0, 0.24);
+    -o-box-shadow: -1px 0px 12px 4px rgba(0,0,0, 0.24);
+    margin-right: 1rem;
+    width: calc(90% / 3);
+    padding-left: 0;
+    padding-right: 0;
+}
+
+#cenovnik .cenovnik-table .table-header h4 {
+    color: var(--section-title-color-dark);
+    font-size: 1.5rem;
+    text-transform: uppercase;
+    font-weight: 600;
+}
+
+#cenovnik .cenovnik-table .table-content {
+    margin-top: 2rem;
+}
+
+#cenovnik .cenovnik-table .table-content ul li {
+    list-style: none;
+    padding-right: 1rem;
+    padding-left: 1rem;
+    padding-bottom: 1rem;
+    font-weight: 600;
+}
+
+#cenovnik .cenovnik-table .table-footer {
+    margin-top: 2rem;
+    padding-bottom: 3rem;
+}
+
+#cenovnik .cenovnik-table .table-footer a {
+    background: linear-gradient(to right, rgba(255, 103, 103, 0.829), rgba(252, 0, 0, 0.726));
+    padding: .8rem 2rem;
+    border-radius: 2rem;
+    color: #ffffff;
+    font-weight: 600;
+}
+
+#cenovnik .cenovnik-table .table-footer a:hover {
+    text-decoration: none;
+    background: #ffffff;
+    color: rgba(252, 0, 0, 0.726);
+    border: 2px solid rgba(252, 0, 0, 0.726);
+}
+
+#cenovnik .table-header {
+    margin: 0;
+    width: 100%;
+}
+
+#cenovnik .cenovnik-table .table-header {
+    padding-top: 3rem;
+    padding-bottom: 2rem;
+}
+
+#cenovnik .cenovnik-table:nth-child(1) .table-header {
+    background: linear-gradient(to right, rgba(255, 103, 103, 0.829), rgba(252, 0, 0, 0.726));
+    padding-top: 3rem;
+    padding-bottom: 2rem;
+    color: #ffffff;
+    position: relative;
+}
+
+#cenovnik .cenovnik-table:nth-child(1) .table-header h4 {
+    color: #ffffff;
+    font-size: 1.5rem;
+    text-transform: uppercase;
+    font-weight: 600;
+}
+
+.badge-pill {
+    border-radius: .5em;
+}
+
+/* ============= Kontakt ============== */
+
+#kontakt {
+    background-color: #faefef;
+    padding-bottom: 5rem;
+    padding-top: 8rem;
+    position: relative;
+}
+
+#kontakt::before {
+    content: '';
+    position: absolute;
+    background-color: #ffffff;
+    width: 100%;
+    height: 20%;
+    transform: skewY(-2deg);
+    transform-origin: top right;
+    top: -6rem;
+    right: 0;
+    left: 0;
+}
+
+.btn-contact {
+    background: linear-gradient(to right, rgba(255, 103, 103, 0.829), rgba(252, 0, 0, 0.726));
+    padding: .5rem 2.2rem;
+    color: #ffffff;
+    font-weight: 600;
+    border-radius: 2rem;
+    border: none;
+}
+
+.btn-contact:hover {
+    background: #ffffff;
+    color: rgba(252, 0, 0, 0.62);
+    border: 2px solid rgba(252, 0, 0, 0.62);
+}
+
+#kontakt .contact-details ul li {
+    padding-bottom: .8rem;
+}
+
+#kontakt .contact-details ul li i {
+    color: rgba(252, 0, 0, 0.62);
+}
+
+/* ============= Vinarije List ============== */
+
+#vinarijeList {
+    background-color: #faefef;
+    padding-bottom: 5rem;
+    padding-top: 8rem;
+    position: relative;
+}
+
+.image-box-vinarije img {
+    margin: 0 auto; 
+    outline: 1px solid #CCC;
+    width: auto;
+}
+
+.contact-details a {
+    text-decoration: none;
+    color: #2b323f;
+}
+
+
+/* ============= Footer ============== */
+#footer {
+    background-color: #2b323f;
+    padding-top: 5rem;
+    padding-bottom: 3rem;
+    position: relative;
+}
+
+#footer h2 {
+    color: #ffffff;
+}
+
+#footer .social-icons {
+    margin-top: .5rem;
+}
+
+#footer .social-icons a {
+    margin: auto;
+    color: #8d8c8c;
+}
+
+.copyright p {
+    margin-top: 1rem;
+    color: #ffffff;
+    font-size: .9rem;
+}
